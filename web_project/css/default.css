@@ -1,0 +1,65 @@
+@import url('reset.css');
+@import url('fonts.css');
+@import url('icons.css');
+
+/**** GLOBALS ******/
+
+body {
+	font-family: 'Aller-web', Arial, Sans-Serif;
+	font-size: 16px;
+}
+header {
+/* 	position: fixed; */
+	-webkit-box-shadow: 0px 10px 25px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 10px 25px 5px rgba(0,0,0,0.5);
+	box-shadow: 0px 10px 25px 5px rgba(0,0,0,0.5);
+	padding-bottom: 20px;
+}
+li {
+	display: inline-block;
+}
+
+/** Brand Logo **/
+.brandLogo {
+	max-width: 40%;
+}
+
+/* Top Nav */
+.topNav {
+	box-sizing: border-box;
+	max-width: 60%;
+	float: right;
+}
+.topNav li {
+	padding: 20px 20px 25px 10px;
+	transform: skew(-45deg);
+}
+.topNav a {
+	display: inline-block;
+	text-decoration: none;
+	transform: skew(45deg);
+}
+.topNav li:not(:last-child) {
+	border-right: 1px solid rgb(0,0,0);
+	border-right: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Bottom Nav */
+.bottomNav {
+	margin-top: -10px;
+	z-index: 10;
+	box-sizing: border-box;
+	max-width: 80%;
+	float: right;
+}
+.bottomNav li {
+	background: white;
+	padding: 10px;
+	transform: skew(-45deg);
+	border: 2px solid;
+}
+.bottomNav a {
+	display: inline-block;
+	text-decoration: none;
+	transform: skew(45deg);
+}
