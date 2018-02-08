@@ -77,31 +77,24 @@ box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 }
 
 .container {
-
-	display: inline-block;
+	overflow: hidden;
+	display: block;
 	width: 100%;
 	border: 2px solid;
+	background-image:url("../images/banner_home.jpg");
+	background-size: 50vw 30vw;
+	background-position: right bottom;
+	background-repeat: no-repeat;
 
 }
 /* split left right */
 .left-container {
 	border: 2px solid;
-	display: inline-block;
+	display: block;
 	width: 50%;
-	transform: skew(-45deg);	
+	transform: skew(-45deg);
+	background: white;	
 }
 .left-text {
 	transform: skew(45deg);
-}
-.right-container {
-	display: inline-block;
-	width: 49%;
-	border: 2px solid;
-	transform: skew(-45deg);
-	margin: auto;
-}
-.right-container img {
-	width:100%;
-	transform: skew(45deg);
-	margin: auto;
 }
