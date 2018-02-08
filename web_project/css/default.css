@@ -9,10 +9,11 @@ body {
 	font-size: 16px;
 }
 header {
-/* 	position: fixed; */
--webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
--moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	position: fixed;
+	width: 100%;
+	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	padding-bottom: 20px;
 }
 
@@ -22,14 +23,17 @@ li {
 
 /** Brand Logo **/
 .brandLogo {
-	max-width: 40%;
+	display: inline-block;
+	width: 40%;
+	margin-top: 15px;
 }
 
 /* Top Nav */
 .topNav {
-	box-sizing: border-box;
-	max-width: 60%;
-	float: right;
+	position: fixed;
+	display: inline-block;
+	right: 0px;
+	top: 0px;
 }
 .topNav li {
 	padding: 20px 20px 25px 10px;
@@ -80,7 +84,6 @@ box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	overflow: hidden;
 	display: block;
 	width: 100%;
-	border: 2px solid;
 	background-image:url("../images/banner_home.jpg");
 	background-size: 50vw 30vw;
 	background-position: right bottom;
@@ -88,8 +91,12 @@ box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 
 }
 /* split left right */
-.left-container {
-	border: 2px solid;
+.left-text-container {
+	border: solid 2px;
+	margin-top: 15vw;
+	padding-top: 5vw;
+	margin-left: 4vw;
+	text-align: left;
 	display: block;
 	width: 50%;
 	transform: skew(-45deg);
