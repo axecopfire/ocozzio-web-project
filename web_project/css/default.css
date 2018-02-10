@@ -106,46 +106,68 @@ h4 {
 
 /* Banner */
 .banner {
-	position: absolute;
-	margin-top: 4rem;
+	position: relative;
 	border: solid 2px;
 	overflow: hidden;
 	display: block;
 	width: 100%;
-	background-image:url("../images/banner_home.jpg");
-	background-size: 700px 500px;
-	background-position: bottom -80px right -50%;
 
-	background-repeat: no-repeat;
 }
 
 /* Banner Split Left */
 .left-text-container {
+	position: relative;
 	padding: 1rem;
 	text-align: left;
 	display: inline-block;
-	height: 100%;
-	width: 60%;
-	transform: skew(-30deg);
 	background: white;	
 }
 .left-text-main {
 	display: inline-block;
 	position: relative;
 	margin-right: 0px;
-	width: 60%;
-	transform: skew(30deg);
+	max-width: 400px;
 	padding: 2rem;
-	margin-left: 5vw;
 }
 .left-text-bottom {
 	margin-top: 4rem;
 }
+.right-container {
+	display: inline-block;
+	right: -661px;
+	width: 700px;
+	height: 330px;
+	transform: skew(-30deg);
+	overflow: hidden;
+	position: relative;
+}
+.right-image {
+	display: inline-block;
+	position: relative;
+	transform: skew(30deg);
+	top: -110px;
+	right: 107px;
+}
+.right-image img {
+	width: 700px;
+	height: 500px;
+}
 
+
+
+
+
+
+
+
+
+.keyboard {
+	background-image: url('./images/para_computer.jpg'); 
+}
 
 /*** MEDIA QUERIES ***/
 
-@media(min-width: 1001px) {
+/* @media(min-width: 1001px) {
 	.banner {
 		background-image: none;
 	}
@@ -161,7 +183,7 @@ h4 {
 		transform: skew(-30deg);
 	}
 
-}
+} 
 @media(max-width: 1000px) {
 	.left-text-main {
 		padding-left: 0px;
@@ -177,7 +199,7 @@ h4 {
 		font-size: 2.75rem;
 		line-height: 3rem;
 	}
-}
+}*/
 @media(max-width: 650px) {
 	.topNav, .bottomNav {
 		display: none;
