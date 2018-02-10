@@ -117,7 +117,6 @@ h4 {
 /* Banner Split Left */
 .left-text-container {
 	position: relative;
-	padding: 1rem;
 	text-align: left;
 	display: inline-block;
 	background: white;	
@@ -125,27 +124,29 @@ h4 {
 .left-text-main {
 	display: inline-block;
 	position: relative;
-	margin-right: 0px;
+	margin-top: 4rem;
 	max-width: 400px;
-	padding: 2rem;
+	padding-top: 2rem;
+	padding-left: 2rem;
 }
 .left-text-bottom {
 	margin-top: 4rem;
 }
 .right-container {
 	display: inline-block;
-	right: -661px;
+	top: 7rem;
 	width: 700px;
-	height: 330px;
+	right: -30%;
+	height: 338px;
 	transform: skew(-30deg);
 	overflow: hidden;
-	position: relative;
+	position: absolute;
 }
 .right-image {
-	display: inline-block;
-	position: relative;
+	display: block;
+	position: absolute;
 	transform: skew(30deg);
-	top: -110px;
+	top: -104px;
 	right: 107px;
 }
 .right-image img {
@@ -153,53 +154,35 @@ h4 {
 	height: 500px;
 }
 
-
-
-
-
-
-
-
-
+/* Keyboard Section */
 .keyboard {
-	background-image: url('./images/para_computer.jpg'); 
+	display: block;
+	color: white;
+	background-image: url(../images/para_computer.jpg);
+	position: relative;
+	height: 25rem;
+	background-repeat: no-repeat;
+	text-align: right;
 }
+.keyboard-text {
+	display: inline-block;
+	padding: 4rem;
+	margin-top: 5rem;
+}
+
 
 /*** MEDIA QUERIES ***/
 
-/* @media(min-width: 1001px) {
-	.banner {
-		background-image: none;
-	}
+@media(max-width: 900px) {
 	.right-container {
-		position: absolute;
-		display: inline-block;	background-image:url("../images/banner_home.jpg");
-		background-size: 700px 500px;
-		background-position: bottom -80px right -50%;
-		width: 50%;
-		height: 100%;
-		background: white;
-		repeat: no-repeat;
-		transform: skew(-30deg);
+		right: -58%;
 	}
-
-} 
-@media(max-width: 1000px) {
-	.left-text-main {
-		padding-left: 0px;
-		margin-left: 2vw;
+}
+@media(max-width: 750px) {
+	.right-container {
+		right: -75%;
 	}
-	.left-text-container {
-		width: 50%;
-	}
-	.banner {
-		background-position: bottom -80px right -20%;		
-	}
-	h2 {
-		font-size: 2.75rem;
-		line-height: 3rem;
-	}
-}*/
+}
 @media(max-width: 650px) {
 	.topNav, .bottomNav {
 		display: none;
@@ -216,6 +199,14 @@ h4 {
 		height: 0.5rem;
 		display: block;
 		border-bottom: 2px solid #50b78d;		
+	}
+	.right-container {
+		right: -95%;
+	}
+}
+@media(max-width:600px) {
+	.right-container {
+		display: none;
 	}
 }
 @media(max-width: 300px) {
