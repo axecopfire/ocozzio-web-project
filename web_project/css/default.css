@@ -7,41 +7,69 @@
 body {
 	font-family: 'Aller-web', Arial, Sans-Serif;
 	font-size: 16px;
+	line-height: 21px;
 }
 header {
+	background-color: white;
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-	padding-bottom: 20px;
+}
+a {
+	text-decoration: none;
 }
 
 li {
 	display: inline-block;
 }
+nav {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+h2 {
+	opacity: 0.8;
+	font-size: 3.16rem;
+	line-height: 4.14rem;
+}
+h3 {
+	opacity: 0.8;
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+
+}
+h4 {
+	opacity: 0.8;
+	font-size: 1.25rem;
+	line-height: 1.63rem;
+	font-weight: 400;
+	font-style: italic;
+}
+
 
 /** Brand Logo **/
 .brandLogo {
+	position: relative;
 	display: inline-block;
-	width: 40%;
-	margin-top: 15px;
+	height: 2rem;
+	margin: 1rem;
 }
+
 
 /* Top Nav */
 .topNav {
-	position: fixed;
-	display: inline-block;
+	position: absolute;
 	right: 0px;
-	top: 0px;
 }
 .topNav li {
-	padding: 20px 20px 25px 10px;
+	padding: 1.5rem;
 	transform: skew(-45deg);
 }
 .topNav a {
 	display: inline-block;
-	text-decoration: none;
 	transform: skew(45deg);
 }
 .topNav li:not(:last-child) {
@@ -51,57 +79,131 @@ li {
 
 /* Bottom Nav */
 .bottomNav {
-	position: fixed;
-	font-size: 16px;
+	position: relative;
+	padding-right: 3rem;
+	margin-top: 3.5rem;
+	margin-right: -3rem;
 	font-weight: 800;
-	top: 60px;
-	right: 0px;
 	background-color: white;
-	z-index: 10;
+	z-index: 2;
 	box-sizing: border-box;
-	max-width: 80%;
 	transform: skew(-45deg);
+	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 }
 .bottomNav ul {
-	background: white;
-	padding: 20px;
-	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
--moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-	padding-right: 200px;
-	margin-right: -150px;
+	background: #ffffff;
+	padding: 1em;
 }
 .bottomNav li {
 	padding: 0px 15px;
 }
 .bottomNav a {
 		display: inline-block;
-		text-decoration: none;
 		transform: skew(45deg);
 }
 
-.container {
+/* Banner */
+.banner {
+	position: absolute;
+	margin-top: 4rem;
+	border: solid 2px;
 	overflow: hidden;
 	display: block;
 	width: 100%;
 	background-image:url("../images/banner_home.jpg");
-	background-size: 50vw 30vw;
-	background-position: right bottom;
-	background-repeat: no-repeat;
+	background-size: 700px 500px;
+	background-position: bottom -80px right -50%;
 
+	background-repeat: no-repeat;
 }
-/* split left right */
+
+/* Banner Split Left */
 .left-text-container {
-	border: solid 2px;
-	margin-top: 15vw;
-	padding-top: 5vw;
-	margin-left: 4vw;
+	padding: 1rem;
 	text-align: left;
-	display: block;
-	width: 50%;
-	transform: skew(-45deg);
+	display: inline-block;
+	height: 100%;
+	width: 60%;
+	transform: skew(-30deg);
 	background: white;	
 }
-.left-text {
-	transform: skew(45deg);
+.left-text-main {
+	display: inline-block;
+	position: relative;
+	margin-right: 0px;
+	width: 60%;
+	transform: skew(30deg);
+	padding: 2rem;
+	margin-left: 5vw;
+}
+.left-text-bottom {
+	margin-top: 4rem;
+}
+
+
+/*** MEDIA QUERIES ***/
+
+@media(min-width: 1001px) {
+	.banner {
+		background-image: none;
+	}
+	.right-container {
+		position: absolute;
+		display: inline-block;	background-image:url("../images/banner_home.jpg");
+		background-size: 700px 500px;
+		background-position: bottom -80px right -50%;
+		width: 50%;
+		height: 100%;
+		background: white;
+		repeat: no-repeat;
+		transform: skew(-30deg);
+	}
+
+}
+@media(max-width: 1000px) {
+	.left-text-main {
+		padding-left: 0px;
+		margin-left: 2vw;
+	}
+	.left-text-container {
+		width: 50%;
+	}
+	.banner {
+		background-position: bottom -80px right -20%;		
+	}
+	h2 {
+		font-size: 2.75rem;
+		line-height: 3rem;
+	}
+}
+@media(max-width: 650px) {
+	.topNav, .bottomNav {
+		display: none;
+	}
+	.burgerIcon {
+		top: 0px;
+		right: 0px;
+		padding: .5rem;
+		margin: .5rem;
+		background-color: gray;
+	}
+	.burgerIcon * {
+		width: 1.5rem;
+		height: 0.5rem;
+		display: block;
+		border-bottom: 2px solid #50b78d;		
+	}
+}
+@media(max-width: 300px) {
+	.brandLogo {
+		height: 10vw;
+	}
+	.burgerIcon {
+		background-color: white;
+	}
+	.burgerIcon * {
+		width: 5vw;
+	}
 }
