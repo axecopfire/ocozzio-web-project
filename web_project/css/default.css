@@ -12,14 +12,19 @@ body {
 header {
 	background-color: white;
 	position: fixed;
+	display: block;
 	width: 100%;
 	z-index: 1;
 	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 }
+
 a {
 	text-decoration: none;
+}
+p {
+	font-style: italic;
 }
 
 li {
@@ -195,13 +200,59 @@ h4 {
 	font-size: 2rem;
 	padding-bottom: 2rem;
 }
-
 .col-text > p {
 	padding: 2em;
 }
 
+/* Note Text Section */
+.note-text {
+	display: block;
+	position: relative;
+}
+.left-note-text {
+	display: inline-block;
+	position: relative;
+	width: 59%;
+}
+.right-note-container {
+	display: inline-block;
+	position: relative;
+	width: 40%;
+	transform: skew(-45deg);
+	background-color: gray;
+	padding: 3em;
+}
+.right-note-text {
+	transform: skew(45deg);
+	color: white;
+}
 
+/* Tablet Section */
+.tablet {
+	display: block;
+	background-image: url("../images/para_tablet.jpg");
+	color: white;
+	text-align: center;
+	display: block;
+	position: relative;
+	padding: 10rem;
+}
 
+/* Footer */
+footer {
+	display: block;
+	background-color: gray;
+	color: white;
+	text-align: center;
+}
+footer a {
+	padding: 2em;
+	display: inline-block;
+}
+.footer-text-container {
+	display: inline-block;
+	border-bottom: solid 2px blue;
+}
 
 /*** MEDIA QUERIES ***/
 
