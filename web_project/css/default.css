@@ -136,7 +136,6 @@ main {
 }
 
 /* Banner */
-
 /* Banner Split Left */
 .left-text-container {
 	display: inline-block;
@@ -160,7 +159,7 @@ main {
 	height: 438px;
 	transform: skew(-30deg);
 	overflow: hidden;
-	margin-left: 2em;
+	margin-right: -8em;
 }
 .right-image {
 	display: inline-block;
@@ -220,19 +219,29 @@ main {
 .left-note-text {
 	display: inline-block;
 	position: relative;
-	width: 59%;
+	padding: 3.5em;
+	width: 50%;
+	text-align: left;
+	margin: auto;
+}
+.left-note-text h4 {
+	padding-bottom: 1em;
 }
 .right-note-container {
-	display: inline-block;
 	position: relative;
+	float: right;
+	margin-right: -7em;
 	width: 40%;
 	transform: skew(-45deg);
 	background-color: gray;
 	padding: 3em;
+	text-align: center;
 }
 .right-note-text {
 	transform: skew(45deg);
 	color: white;
+	max-width: 70%;
+	
 }
 
 /* Tablet Section */
