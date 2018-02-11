@@ -171,6 +171,23 @@ h4 {
 }
 
 
+/* Columns Section */
+.col-section {
+	display: block;
+}
+.tool-container {
+	display: inline-block;
+	width: 33%
+}
+.key-container {
+	display: inline-block;
+	width: 33%
+}
+.network-container {
+	display: inline-block;
+	width: 33%
+}
+
 /*** MEDIA QUERIES ***/
 
 @media(max-width: 900px) {
