@@ -12,11 +12,6 @@ body {
 p {
 	font-style: italic;
 }
-
-li {
-	display: inline-block;
-}
-
 h2 {
 	opacity: 0.8;
 	font-size: 3.16rem;
@@ -36,48 +31,59 @@ h4 {
 	font-style: italic;
 }
 .container {
+	margin: 0 auto;
 	display: block;
-	padding: 1.5rem 1.5rem;
-	max-width: 1280px;
+	width: 1280px;
+	max-width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
 }
-
+.col_12 {
+	width:100%;
+	display: inline-block;
+	font-size: 1rem;
+	vertical-align: top;
+	padding: 0 0.75rem;
+}
 /******** HEADER ********/
 header {
 		background-color: white;
+		box-sizing: border-box;
 		position: fixed;
 		display: block;
-		width: 100%;
+		width: 100vw;
+		top: 0;
+		left: 0;
 		z-index: 1;
-		text-align: center;
 		-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 		-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 		box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	}
+	header .container {
+		padding: 1.5em;
 	}
 
 
 /** Brand Logo **/
 .brandLogo {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	display: inline-block;
-	height: 2rem;
-	margin: 1rem;
+	float: left;
 }
 
 /********** NAV *********/
-nav {
-	z-index: 2;
-	clear: both;
-}
 /* Top Nav */
 
 .topNav {
-	display: inline-block;
+	display: block;
+	bottom: auto;
+	top: -0.25em;
+	float: right;
+}
+.topNav ul {
+	vertical-align: baseline;
 }
 .topNav li {
 	display: inline-block;
-	padding: 1.5rem;
+	padding: 2rem;
 	transform: skew(-45deg);
 }
 .topNav a {
@@ -91,52 +97,56 @@ nav {
 
 /* Bottom Nav */
 .bottomNav {
-	position: relative;
-	padding-right: 3rem;
-	margin-top: 3.5rem;
-	margin-right: -3rem;
-	font-weight: 800;
-	background-color: white;
+	position: absolute;
+	display: block;
+	top: 5.75em;
+	right: 20%;
+}
+.bottomNav ul {
+	display: inline-block;
+	bottom: -1em;
 	z-index: 2;
-	box-sizing: border-box;
+	font-weight: 800;
+	padding: 1em 2em;
+	background-color: white;
+	box-sizing: border-box; 
 	transform: skew(-45deg);
 	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
 	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-}
-.bottomNav ul {
 	background: #ffffff;
-	padding: 1em;
+	vertical-align: baseline;
+	list-style: none;
 }
 .bottomNav li {
-	padding: 0px 15px;
+	display: inline-block;
+	transform: skew(45deg);
 }
 .bottomNav a {
-		display: inline-block;
-		transform: skew(45deg);
+	padding: 1em;
+
+}
+
+/*********** Main **********/
+main {
+	padding-top: 6em;
+	margin: 0;
+	display: block;
+	position: relative;
 }
 
 /* Banner */
-.banner {
-	position: relative;
-	border: solid 2px;
-	overflow: hidden;
-	display: block;
-	width: 100%;
-
-}
 
 /* Banner Split Left */
 .left-text-container {
-	position: relative;
-	text-align: left;
 	display: inline-block;
+	text-align: left;
 	background: white;	
 }
 .left-text-main {
 	display: inline-block;
 	position: relative;
-	margin-top: 4rem;
+	margin-top: 2rem;
 	max-width: 400px;
 	padding-top: 2rem;
 	padding-left: 2rem;
@@ -145,21 +155,17 @@ nav {
 	margin-top: 4rem;
 }
 .right-container {
-	display: inline-block;
-	top: 7rem;
-	width: 700px;
-	right: -30%;
-	height: 338px;
+	float: right;
+	width: 40%;
+	height: 438px;
 	transform: skew(-30deg);
 	overflow: hidden;
-	position: absolute;
+	margin-left: 2em;
 }
 .right-image {
-	display: block;
-	position: absolute;
+	display: inline-block;
 	transform: skew(30deg);
-	top: -104px;
-	right: 107px;
+	margin-left: -100px;
 }
 .right-image img {
 	width: 700px;
@@ -169,11 +175,11 @@ nav {
 /* Keyboard Section */
 .keyboard {
 	display: block;
+	width: 100%;
 	color: white;
 	background-image: url(../images/para_computer.jpg);
 	position: relative;
 	height: 25rem;
-	background-repeat: no-repeat;
 	text-align: right;
 }
 .keyboard-text {
