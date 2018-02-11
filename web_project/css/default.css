@@ -105,6 +105,11 @@ h4 {
 }
 
 /* Banner */
+.container {
+	display: block;
+	width: 1280px;
+	margin: auto;
+}
 .banner {
 	position: relative;
 	border: solid 2px;
@@ -174,19 +179,29 @@ h4 {
 /* Columns Section */
 .col-section {
 	display: block;
+	background-color:  #50b78d;
 }
-.tool-container {
+.col {
 	display: inline-block;
-	width: 33%
+	width: 33%;
+	text-align: center;
+	padding-top: 3rem;
+	padding-bottom: 2rem;
+	color: white;
+	height: 100%;
 }
-.key-container {
-	display: inline-block;
-	width: 33%
+.col :be
+.icon {
+	font-size: 2rem;
+	padding-bottom: 2rem;
 }
-.network-container {
-	display: inline-block;
-	width: 33%
+
+.col-text > p {
+	padding: 2em;
 }
+
+
+
 
 /*** MEDIA QUERIES ***/
 
