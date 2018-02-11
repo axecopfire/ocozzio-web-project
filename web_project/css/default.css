@@ -9,20 +9,6 @@ body {
 	font-size: 16px;
 	line-height: 21px;
 }
-header {
-	background-color: white;
-	position: fixed;
-	display: block;
-	width: 100%;
-	z-index: 1;
-	-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-	-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-	box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
-}
-
-a {
-	text-decoration: none;
-}
 p {
 	font-style: italic;
 }
@@ -30,11 +16,7 @@ p {
 li {
 	display: inline-block;
 }
-nav {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
+
 h2 {
 	opacity: 0.8;
 	font-size: 3.16rem;
@@ -53,23 +35,48 @@ h4 {
 	font-weight: 400;
 	font-style: italic;
 }
+.container {
+	display: block;
+	padding: 1.5rem 1.5rem;
+	max-width: 1280px;
+}
+
+/******** HEADER ********/
+header {
+		background-color: white;
+		position: fixed;
+		display: block;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+		-webkit-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+		-moz-box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+		box-shadow: 0px 15px 15px -5px rgba(0,0,0,0.6);
+	}
 
 
 /** Brand Logo **/
 .brandLogo {
-	position: relative;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	display: inline-block;
 	height: 2rem;
 	margin: 1rem;
 }
 
-
+/********** NAV *********/
+nav {
+	z-index: 2;
+	clear: both;
+}
 /* Top Nav */
+
 .topNav {
-	position: absolute;
-	right: 0px;
+	display: inline-block;
 }
 .topNav li {
+	display: inline-block;
 	padding: 1.5rem;
 	transform: skew(-45deg);
 }
@@ -110,11 +117,6 @@ h4 {
 }
 
 /* Banner */
-.container {
-	display: block;
-	width: 1280px;
-	margin: auto;
-}
 .banner {
 	position: relative;
 	border: solid 2px;
@@ -246,16 +248,24 @@ footer {
 	text-align: center;
 }
 footer a {
-	padding: 2em;
+	padding: 2em 4em;
 	display: inline-block;
 }
 .footer-text-container {
 	display: inline-block;
 	border-bottom: solid 2px white;
 }
+.footer-icon-container {
+	padding: 2em;
+}
+.footer-icon-container * {
+	padding-left: 2em;
+	padding-right: 2em;
+	height: 1.5rem;
+}
 
 /*** MEDIA QUERIES ***/
-
+/* 
 @media(max-width: 900px) {
 	.right-container {
 		right: -58%;
@@ -302,4 +312,4 @@ footer a {
 	.burgerIcon * {
 		width: 5vw;
 	}
-}
+} */
