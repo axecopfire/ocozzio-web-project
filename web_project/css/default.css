@@ -31,11 +31,9 @@ h4 {
 	font-style: italic;
 }
 .container {
-	margin: 0 auto;
 	display: block;
 	width: 1280px;
-	max-width: 95%;
-	margin: 0 auto;
+	max-width: 100%;
 	overflow: hidden;
 }
 .col_12 {
@@ -67,6 +65,8 @@ header {
 /** Brand Logo **/
 .brandLogo {
 	float: left;
+	height: 2em;
+	margin-top: 2em;
 }
 
 /********** NAV *********/
@@ -96,11 +96,21 @@ header {
 }
 
 /* Bottom Nav */
-.bottomNav {
+.bottomNav-container {
 	position: absolute;
+	margin: 0 auto;
 	display: block;
-	top: 5.75em;
-	right: 20%;
+	width: 1280px;
+	max-width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: right;
+	top: 6em;
+
+}
+.bottomNav {
+	position: relative;
+	display: inline-block;
 }
 .bottomNav ul {
 	display: inline-block;
@@ -280,24 +290,16 @@ footer a {
 }
 
 /*** MEDIA QUERIES ***/
-/* 
-@media(max-width: 900px) {
-	.right-container {
-		right: -58%;
-	}
-}
-@media(max-width: 750px) {
-	.right-container {
-		right: -75%;
-	}
-}
-@media(max-width: 650px) {
+
+@media(max-width: 850px) {
 	.topNav, .bottomNav {
 		display: none;
 	}
 	.burgerIcon {
-		top: 0px;
-		right: 0px;
+		position: absolute;
+		display: inline-block;
+		top: 2em;
+		right: 2em;
 		padding: .5rem;
 		margin: .5rem;
 		background-color: gray;
@@ -306,8 +308,22 @@ footer a {
 		width: 1.5rem;
 		height: 0.5rem;
 		display: block;
-		border-bottom: 2px solid #50b78d;		
+		border-bottom: 2px solid #50b78d;	
+			
 	}
+	.col-section {
+		text-align: center;
+	}
+	.col-section * {
+		width: 95%;
+		display: block;
+		margin: auto;
+	}
+}
+
+/* 
+@media(max-width: 650px) {
+
 	.right-container {
 		right: -95%;
 	}
